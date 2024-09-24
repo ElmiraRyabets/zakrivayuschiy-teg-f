@@ -330,7 +330,6 @@
   bottom: 0;
   left: 0;
   right: 0;
-  width: 0;
   background-color:  var(--hover-button-color);
   color: var(--hover-button-color);
   mix-blend-mode: hard-light;
