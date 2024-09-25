@@ -2,22 +2,29 @@
 
 /*light основная тема*/
 :root {
-    --main-font: "Inter-Variable", sans-serif;
-    --accent-font: "Press-Start-2P", sans-serif;
-    --text-font-weight: 400;
-    --title-font-weight: 700;
-    --background-color: #ffffff;
-    --accent-color: #000000;
-    --stroke-color: #ffffff;
-    --hover-button-color: #ffffff;
-    --red-color: #FF0000;
-    --black-color:  #000000;
-    --background-image: repeating-linear-gradient(
-        0deg,
-        transparent,
-        transparent 2px,
-        #d3d3d3 2px,
-        #d3d3d3 4px
-      ),
-      linear-gradient(to bottom, #e7e7e7, #e7e7e7 0.01%, #1a1a1a);
-  }
+  --main-font: "Inter-Variable", sans-serif;
+  --accent-font: "Press-Start-2P", sans-serif;
+  --text-font-weight: 400;
+  --title-font-weight: 700;
+  --background-color: #ffffff;
+  --accent-color: #000000;
+  --stroke-color: #ffffff;
+  --hover-button-color: #ffffff;
+  --red-color: #ff0000;
+  --black-color: #000000;
+  --background-image: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      #d3d3d3 2px,
+      #d3d3d3 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      #d3d3d3 2px,
+      #d3d3d3 4px
+    ),
+    linear-gradient(to bottom, #e7e7e7, #e7e7e7 0.01%, #1a1a1a);
+}

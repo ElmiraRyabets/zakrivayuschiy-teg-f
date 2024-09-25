@@ -12,3 +12,125 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+@keyframes change-scale {
+  to {
+    scale: 1.5;
+  }
+}
+
+@keyframes enable-sparks {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes back-contour {
+  to {
+    fill: var(--accent-color);
+  }
+}
+
+@keyframes add-border {
+  to {
+    border: 2px solid var(--accent-color);
+  }
+}
+
+@keyframes change-button-opacity {
+  to {
+    opacity: 0.6;
+  }
+}
+
+@keyframes change-button-underscore {
+  to {
+    scale: 1;
+  }
+}
+
+@keyframes triangle-shift {
+  from {
+    translate: -4px;
+  }
+  to {
+    translate: 0px;
+  }
+}
+
+@keyframes add-shadow {
+  to {
+    box-shadow: 2px 2px 0px var(--accent-color);
+  }
+}
+
+@keyframes recolor-button {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.core {
+  fill: transparent;
+  transition: fill 0.3s linear 0.03s;
+}
+
+.main-body {
+  fill: transparent;
+  transition: fill 0.3s linear;
+}
+
+.card__icon-button:hover .like-icon:not(.is-liked) .core {
+  transition: fill 0.3s linear;
+  fill: var(--accent-color);
+}
+
+.card__icon-button:hover .like-icon:not(.is-liked) .main-body {
+  transition: fill 0.3s linear 0.05s;
+  fill: var(--accent-color);
+}
+
+.card__icon-button:active .like-icon .core {
+  transition: fill 0.3s linear;
+  fill: var(--red-color);
+}
+
+.card__icon-button:active .like-icon .main-body {
+  transition: fill 0.3s linear 0.05s;
+  fill: var(--red-color);
+}
+
+.like-icon.is-liked .core {
+  transition: fill 0.3s linear;
+  fill: var(--red-color);
+}
+
+.like-icon.is-liked .main-body {
+  transition: fill 0.3s linear 0.05s;
+  fill: var(--red-color);
+}
+
+.like-icon.is-liked .contour {
+  transition: fill 0.3s linear 0.06s;
+  fill: var(--red-color);
+}
+
+.like-icon.is-liked .heart {
+  scale: 1;
+  transform-origin: center center;
+  animation: change-scale 0.3s ease-in 0.1s;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+}
+
+.like-icon.is-liked .sparks {
+  opacity: 0;
+  transform-origin: center center;
+  animation: enable-sparks 0.3s ease-in 0.3s;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+}
+
+.like-icon:not(.is-liked) .contour {
+  animation: back-contour 0.1s linear;
+}
