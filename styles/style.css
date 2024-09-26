@@ -309,6 +309,7 @@
   height: 100%;
   width: 100%;
   mix-blend-mode: difference;
+  transform-origin: left;
 }
 
 .button:hover::after {
