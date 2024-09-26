@@ -177,7 +177,6 @@
 
 .save_button {
   display: flex;
-  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -288,18 +287,15 @@
   animation: triangle-shift 0.5s ease-in-out running alternate-reverse infinite;
 }
 
-.card__like-button:focus,
-.save_button:focus {
+.button:focus {
   outline: none;
 }
 
-.card__like-button:focus-visible,
-.save_button:focus-visible {
+.button:focus-visible {
   animation: add-shadow 0.3s ease forwards;
 }
 
-.card__like-button::after,
-.save_button::after {
+.button::after {
   content: "";
   position: absolute;
   top: 0;
@@ -308,16 +304,17 @@
   right: 0;
   background-color: var(--hover-button-color);
   color: var(--hover-button-color);
+  transition: transform 0.5s ease-in-out;
   transform: scaleX(0);
+  transform-origin: left;
   height: 100%;
   width: 100%;
   mix-blend-mode: difference;
 }
 
-.card__like-button:hover::after,
-.save_button:hover::after {
-  transform-origin: left;
-  animation: recolor-button 0.5s ease-in-out forwards;
+.button:hover::after {
+  transform: scaleX(1);
+  transition: transform 0.5s ease-in-out;
 }
 
 .card-buttons {
@@ -339,7 +336,6 @@
 }
 
 .card__like-button {
-  position: relative;
   inline-size: 130px;
 }
 
@@ -429,6 +425,7 @@
 }
 
 .button {
+  position: relative;
   border: 2px solid var(--accent-color);
   cursor: pointer;
   background-color: var(--background-color);

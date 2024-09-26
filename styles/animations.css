@@ -64,11 +64,11 @@
   }
 }
 
-@keyframes recolor-button {
-  to {
-    transform: scaleX(1);
+@keyframes color-button {
+    to {
+      transform: scaleX(0);
+    }
   }
-}
 
 .core {
   fill: transparent;
